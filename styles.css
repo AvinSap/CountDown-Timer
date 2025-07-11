@@ -33,3 +33,14 @@ input[type="datetime-local"] {
   display: flex;
   justify-content: center;
 }
+
+#countDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 30px;
+  background-color: antiquewhite;
+  border: 10px solid;
+  width: 10rem;
+}
