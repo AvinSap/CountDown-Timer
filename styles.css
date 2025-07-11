@@ -11,22 +11,65 @@ body {
 }
 
 h1 {
+  margin: 2rem auto;
   text-align: center;
   font-weight: 900;
   color: white;
   font-family: cursive;
+  background-color: black;
+  opacity: 60%;
+  border-radius: 10px;
+  width: 15rem;
 }
 input[type="datetime-local"] {
-  font-size: large;
-  padding: 20px;
-  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 18px 24px;
+  border-radius: 16px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.2s, border 0.2s, background 0.3s;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  backdrop-filter: blur(8px);
+}
+
+input[type="datetime-local"]:focus {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 3px #e52e71, 0 4px 24px rgba(0, 0, 0, 0.12);
+  border: 2px solid #e52e71;
+  color: #a31621;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
 }
 .center-input {
   display: flex;
   justify-content: center;
 }
 #startBtn {
-  border-radius: 15px;
+  border-radius: 16px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+  backdrop-filter: blur(8px);
+}
+
+#startBtn:hover {
+  transform: scale(1.08);
+  background: rgba(229, 46, 113, 0.25);
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(229, 46, 113, 0.18);
 }
 .center-btn {
   margin-top: 15px;
@@ -38,9 +81,30 @@ input[type="datetime-local"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
-  padding: 30px;
-  background-color: antiquewhite;
-  border: 10px solid;
-  width: 10rem;
+  margin: 2rem auto;
+  padding: 32px;
+  width: 14rem;
+  min-height: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+/* Optional: Add a subtle gradient border using a pseudo-element */
+#countDown::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 24px;
+  padding: 0;
+  background: linear-gradient(90deg, #fcf7f8, #a31621);
+  opacity: 0.25;
+  pointer-events: none;
 }

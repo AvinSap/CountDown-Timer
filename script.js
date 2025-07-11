@@ -79,7 +79,7 @@ function startCountDown() {
 }
 // Confetti function
 function launchConfetti() {
-  const duration = 15 * 1000; // 5 seconds
+  const duration = 15 * 1000; // 15 seconds
   const end = Date.now() + duration;
 
   (function frame() {
