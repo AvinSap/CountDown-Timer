@@ -1,9 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  /* background: linear-gradient(135deg, #FFDEE9, #B5FFFC) no-repeat; /* Pretty gradient */
-  background: url(image/countdown.jpeg) no-repeat; /* Pretty gradient */
-  color: #333;
+  background: url(image/countdown.jpeg) no-repeat;
   color: #333;
   padding: 50px;
   min-height: 100vh;
@@ -83,7 +81,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   align-items: center;
   margin: 2rem auto;
   padding: 32px;
-  width: 14rem;
+  width: 15rem;
   min-height: 3rem;
   font-size: 2rem;
   font-weight: bold;
@@ -96,7 +94,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   backdrop-filter: blur(10px);
 }
 
-/* Optional: Add a subtle gradient border using a pseudo-element */
+/* Add a subtle gradient border using a pseudo-element */
 #countDown::before {
   content: "";
   position: absolute;
@@ -107,4 +105,10 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   background: linear-gradient(90deg, #fcf7f8, #a31621);
   opacity: 0.25;
   pointer-events: none;
+}
+footer {
+  margin-top: 10rem;
+}
+hr {
+  opacity: 10%;
 }
